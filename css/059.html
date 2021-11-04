@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform</title>
+    <style>
+        .one {
+            height: 100px;
+            width: 200px;
+            box-sizing: border-box;
+            background: aliceblue;
+            border: 5px solid dimgray;
+            border-radius: 30px;
+            text-align: center;
+            line-height: 80px;
+            font-size: 30px;
+            color: dimgray;
+            transition: all 1s;
+        }
+        .one:hover {
+            background: lightslategray;
+            color: white;
+            transform: rotate(90deg) scale(1.2);
+        }
+        .two {
+            height: 100px;
+            width: 200px;
+            box-sizing: border-box;
+            background: khaki;
+            border: 5px solid dimgray;
+            border-radius: 30px;
+            text-align: center;
+            line-height: 80px;
+            font-size: 30px;
+            color: dimgray;
+            transition: all 1s;
+        }
+        .two:hover {
+            background: darkkhaki;
+            color: white;
+            transform: translate(100px, 200px);
+        }
+    </style>
+</head>
+<body>
+    <div class="one">클릭</div>
+    <br>
+    <div class="two">클릭</div>
+</body>
+</html>
