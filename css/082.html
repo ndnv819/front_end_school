@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>글자 슬라이드</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <style>
+        /* animation */
+        @keyframes 움직여 {
+            0% {
+                transform: translate(0px, 0px);
+            }
+            50% {
+                transform: translate(50px, 0px), rotate(360deg);
+            }
+            100% {
+                transform: translate(100px, 100px);
+            }
+        }
+        @keyframes 돌아 {
+            0% {
+                transform: translateY(0);
+            }
+            25% {
+                transform: translateY(-20%);
+            }
+            50% {
+                transform: translateY(-40%);
+            }
+            75% {
+                transform: translateY(-60%);
+            }
+            100% {
+                transform: translateY(-80%);
+            }
+        }
+        /* reset */
+        body, h1, h2, ul, li {
+            margin: 0;
+            padding: 10px;
+        }
+        li {
+            list-style: none;
+        }
+        /* style */
+        body {
+            font-family: 'Permanent Marker', cursive;
+            background: black;
+        }
+        .name {
+            margin: 100px;
+            text-align: center;
+            font-size: 49px;
+            color: white;
+        }
+        .name-job {
+            position: relative;
+            height: 100px;
+            line-height: 100px;
+            overflow: hidden;
+        }
+        .name-job::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            box-shadow: inset 0 0 10px 10px #000;
+        }
+        .name-job-list {
+            animation: 돌아 4s;
+            animation-iteration-count: infinite;
+        }
+        div {
+            width: 500px;
+            height: 500px;
+            /* background: #47478f; */
+        }
+    </style>
+</head>
+<body>
+    <div class="name">
+        I'm a
+        <div class="name-job">
+            <ul class="name-job-list">
+                <li>Computer Scientist</li>
+                <li>Programmer</li>
+                <li>Tutor</li>
+                <li>Developer</li>
+                <li>Computer Scientist</li>
+            </ul>
+        </div>
+        <h2 class="name-title">Licat</h2>
+    </div>
+</body>
+</html>
