@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float</title>
+    <style>
+        /* ul {
+            overflow: hidden;
+        } */
+        /* li {
+            height: 100px;
+            background: pink;
+        }
+        li:nth-child(2) {
+            float: left;
+            background: black;
+            width: 100%;
+        }
+        li:nth-child(3) {
+            clear: left;
+        } */
+        ul::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        li {
+            height: 100px;
+            width: 300px;
+            background: pink;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+</html>

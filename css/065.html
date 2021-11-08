@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position - sticky</title>
+    <style>
+        section {
+            height: 1000px;
+            border: 3px solid;
+        }
+        h2 {
+            /* 나온 지 얼마 안되서 벤더프리픽스 필요함, 사파리에서 지원가능해짐 */
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            background: lemonchiffon;
+        }
+    </style>
+</head>
+<body>
+    <h1>sticky test</h1>
+    <section>
+        <h2>1. 오늘의 점심 메뉴</h2>
+        <ul>
+            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta corporis deleniti nam cupiditate repudiandae totam, hic eveniet culpa laboriosam necessitatibus ut, numquam officiis nesciunt beatae aliquid repellendus accusamus. Laboriosam velit inventore assumenda porro perferendis! Facilis, saepe minus voluptatum ullam amet tempore, minima vitae totam est excepturi nesciunt magnam. Cum officiis dolore id delectus sed officia, consequatur tempora quo, blanditiis at iure iusto eligendi fugit deleniti ducimus laborum odit vero quibusdam reiciendis excepturi! Possimus, nemo illo! Ea ad provident est rerum ullam veniam saepe architecto, excepturi similique odit aliquid minus incidunt modi tenetur! Deserunt, voluptatem optio. Repudiandae praesentium consequatur reiciendis officiis.</li>
+            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta corporis deleniti nam cupiditate repudiandae totam, hic eveniet culpa laboriosam necessitatibus ut, numquam officiis nesciunt beatae aliquid repellendus accusamus. Laboriosam velit inventore assumenda porro perferendis! Facilis, saepe minus voluptatum ullam amet tempore, minima vitae totam est excepturi nesciunt magnam. Cum officiis dolore id delectus sed officia, consequatur tempora quo, blanditiis at iure iusto eligendi fugit deleniti ducimus laborum odit vero quibusdam reiciendis excepturi! Possimus, nemo illo! Ea ad provident est rerum ullam veniam saepe architecto, excepturi similique odit aliquid minus incidunt modi tenetur! Deserunt, voluptatem optio. Repudiandae praesentium consequatur reiciendis officiis.</li>
+            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta corporis deleniti nam cupiditate repudiandae totam, hic eveniet culpa laboriosam necessitatibus ut, numquam officiis nesciunt beatae aliquid repellendus accusamus. Laboriosam velit inventore assumenda porro perferendis! Facilis, saepe minus voluptatum ullam amet tempore, minima vitae totam est excepturi nesciunt magnam. Cum officiis dolore id delectus sed officia, consequatur tempora quo, blanditiis at iure iusto eligendi fugit deleniti ducimus laborum odit vero quibusdam reiciendis excepturi! Possimus, nemo illo! Ea ad provident est rerum ullam veniam saepe architecto, excepturi similique odit aliquid minus incidunt modi tenetur! Deserunt, voluptatem optio. Repudiandae praesentium consequatur reiciendis officiis.</li>
+        </ul>
+    </section>
+    <section>
+        <h2>1. 내일의 점심 메뉴</h2>
+        <ul>
+            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta corporis deleniti nam cupiditate repudiandae totam, hic eveniet culpa laboriosam necessitatibus ut, numquam officiis nesciunt beatae aliquid repellendus accusamus. Laboriosam velit inventore assumenda porro perferendis! Facilis, saepe minus voluptatum ullam amet tempore, minima vitae totam est excepturi nesciunt magnam. Cum officiis dolore id delectus sed officia, consequatur tempora quo, blanditiis at iure iusto eligendi fugit deleniti ducimus laborum odit vero quibusdam reiciendis excepturi! Possimus, nemo illo! Ea ad provident est rerum ullam veniam saepe architecto, excepturi similique odit aliquid minus incidunt modi tenetur! Deserunt, voluptatem optio. Repudiandae praesentium consequatur reiciendis officiis.</li>
+            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta corporis deleniti nam cupiditate repudiandae totam, hic eveniet culpa laboriosam necessitatibus ut, numquam officiis nesciunt beatae aliquid repellendus accusamus. Laboriosam velit inventore assumenda porro perferendis! Facilis, saepe minus voluptatum ullam amet tempore, minima vitae totam est excepturi nesciunt magnam. Cum officiis dolore id delectus sed officia, consequatur tempora quo, blanditiis at iure iusto eligendi fugit deleniti ducimus laborum odit vero quibusdam reiciendis excepturi! Possimus, nemo illo! Ea ad provident est rerum ullam veniam saepe architecto, excepturi similique odit aliquid minus incidunt modi tenetur! Deserunt, voluptatem optio. Repudiandae praesentium consequatur reiciendis officiis.</li>
+            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta corporis deleniti nam cupiditate repudiandae totam, hic eveniet culpa laboriosam necessitatibus ut, numquam officiis nesciunt beatae aliquid repellendus accusamus. Laboriosam velit inventore assumenda porro perferendis! Facilis, saepe minus voluptatum ullam amet tempore, minima vitae totam est excepturi nesciunt magnam. Cum officiis dolore id delectus sed officia, consequatur tempora quo, blanditiis at iure iusto eligendi fugit deleniti ducimus laborum odit vero quibusdam reiciendis excepturi! Possimus, nemo illo! Ea ad provident est rerum ullam veniam saepe architecto, excepturi similique odit aliquid minus incidunt modi tenetur! Deserunt, voluptatem optio. Repudiandae praesentium consequatur reiciendis officiis.</li>
+        </ul>
+    </section>
+    <section>
+        <h2>3. 오늘의 저녁 메뉴</h2>
+        <ul>
+            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta corporis deleniti nam cupiditate repudiandae totam, hic eveniet culpa laboriosam necessitatibus ut, numquam officiis nesciunt beatae aliquid repellendus accusamus. Laboriosam velit inventore assumenda porro perferendis! Facilis, saepe minus voluptatum ullam amet tempore, minima vitae totam est excepturi nesciunt magnam. Cum officiis dolore id delectus sed officia, consequatur tempora quo, blanditiis at iure iusto eligendi fugit deleniti ducimus laborum odit vero quibusdam reiciendis excepturi! Possimus, nemo illo! Ea ad provident est rerum ullam veniam saepe architecto, excepturi similique odit aliquid minus incidunt modi tenetur! Deserunt, voluptatem optio. Repudiandae praesentium consequatur reiciendis officiis.</li>
+            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta corporis deleniti nam cupiditate repudiandae totam, hic eveniet culpa laboriosam necessitatibus ut, numquam officiis nesciunt beatae aliquid repellendus accusamus. Laboriosam velit inventore assumenda porro perferendis! Facilis, saepe minus voluptatum ullam amet tempore, minima vitae totam est excepturi nesciunt magnam. Cum officiis dolore id delectus sed officia, consequatur tempora quo, blanditiis at iure iusto eligendi fugit deleniti ducimus laborum odit vero quibusdam reiciendis excepturi! Possimus, nemo illo! Ea ad provident est rerum ullam veniam saepe architecto, excepturi similique odit aliquid minus incidunt modi tenetur! Deserunt, voluptatem optio. Repudiandae praesentium consequatur reiciendis officiis.</li>
+            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta corporis deleniti nam cupiditate repudiandae totam, hic eveniet culpa laboriosam necessitatibus ut, numquam officiis nesciunt beatae aliquid repellendus accusamus. Laboriosam velit inventore assumenda porro perferendis! Facilis, saepe minus voluptatum ullam amet tempore, minima vitae totam est excepturi nesciunt magnam. Cum officiis dolore id delectus sed officia, consequatur tempora quo, blanditiis at iure iusto eligendi fugit deleniti ducimus laborum odit vero quibusdam reiciendis excepturi! Possimus, nemo illo! Ea ad provident est rerum ullam veniam saepe architecto, excepturi similique odit aliquid minus incidunt modi tenetur! Deserunt, voluptatem optio. Repudiandae praesentium consequatur reiciendis officiis.</li>
+        </ul>
+    </section>
+</body>
+</html>
