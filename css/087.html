@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hover, actiove, focus</title>
+    <style>
+        .one {
+            background: brown;
+            width: 100px;
+            height: 100px;
+            transition: all 1s;
+        }
+        .one:hover {
+            background: pink;
+            width: 200px;
+            height: 200px;
+        }
+        .btn {
+            border: 4px solid burlywood;
+            border-radius: 4px;
+            /* width 포함 padding 이라서 width을 따로 안줘도 됨 */
+            padding: 30px 60px;
+            background: none;
+            color: burlywood;
+            font-size: 32px;
+        }
+        .btn:active {
+            background-color: burlywood;
+            color: white;
+        }
+        .box:focus {
+            background: cornsilk;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="one"></div>
+    <input type="text" class="box" placeholder="click here!">
+    <button class="btn">Click me!</button>
+</body>
+</html>
