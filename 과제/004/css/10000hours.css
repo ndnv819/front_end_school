@@ -1,0 +1,88 @@
+@font-face {
+    font-family: 'OTEnjoystoriesBA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/OTEnjoystoriesBA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GmarketSansBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 400;
+    src: url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2") format('woff2'),
+    url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff") format('woff'),
+    url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf") format('opentype');
+}
+body {
+    background-color: #5B2386;
+    color: white;
+    font-family: 'GmarketSansMedium';
+}
+.sr-only {
+    position: absolute;
+    left: -9999px;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.title {
+    margin-top: 100px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+}
+.title .clock {
+    position: relative;
+}
+.title-img {
+    width: 400px;
+    position: absolute;
+    top: 198px;
+}
+.first-comment {
+    margin-bottom: 50px;
+}
+.first-comment > p{
+    font-family: 'OTEnjoystoriesBA';
+    color: #F5DF4D;
+    font-size: 36px;
+}
+.second-comment {
+    margin-bottom: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+.second-comment > div {
+    line-height: 30px;
+    position: absolute;
+    font-size: 17px;
+}
+.second-comment > div > p:first-child {
+    font-family: 'GmarketSansBold';
+    font-size: 20px;
+    display: inline-block;
+}
+.second-comment > div > p:nth-child(2) {
+    display: inline-block;
+}
+
