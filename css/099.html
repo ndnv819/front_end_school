@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카드 돌리기</title>
+    <style>
+        @keyframes turn {
+            from {
+                transform: rotateY(0deg);
+            }
+            to {
+                transform: rotateY(360deg);
+            }
+        }
+
+        .origin {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            border: 1px solid;
+            perspective: 400px;
+            margin: 100px auto;
+            /* backface-visibility을 사용하기 위해 먼저 써줘야 함, 요소의 자식을 3d에 배치해줌, 상속되지 않는 속성으로 필요한 곳에 다 써줘야 함 */
+            transform-style: preserve-3d;
+        }
+        
+        .rotate-panel {
+            position: absolute;
+            font-size: 32px;
+            width: 200px;
+            height: 200px;
+            animation: turn 20s;
+            transform-style: preserve-3d; 
+        }
+        
+        .front {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: pink;
+            /* 요소의 뒷면이 사용자를 향할 때 보이지 않게 숨김 */
+            backface-visibility: hidden;
+        }
+        
+        .back {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: orange;
+            /* 뒷면이 뒤로 갈 수 있게 일단 뒤집어 줘야한다 */
+            transform: rotateY(180deg);
+            backface-visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="origin">
+        <div class="rotate-panel">
+            <div class="front">앞면</div>
+            <div class="back">뒷면</div>
+        </div>
+    </div>
+</body>
+</html>
