@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <title>css 설계기법</title>
+    <style>
+        /* 1. 구조와 스킨의 분리 */
+        .btn1 {
+            font-weight: bold;
+        }
+        
+        .btn2 {
+        }
+        
+        /* .btn {
+            width: 200px;
+            height: 80px;
+            font-size: 30px;
+        }
+        
+        .btn-close {
+            background: black;
+            color: #fff;
+            border: 3px dotted #fff;
+        } */
+
+        /* main(컨테이너, 부모)에 버튼(컨텐츠, 자식)스타일이 종속되버림 */
+        /* structor와 module의 분리 */
+        /* #main .btn {
+            width: 300px;
+            padding: 20px 10px;
+            margin: 10px;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        #main .general {
+            background-color: aquamarine;
+            color: black;
+        }
+
+        #main .warning {
+            background-color: azure;
+            color: blue;
+        } */
+
+        /* 2. smacss */
+        /*  
+            베이스 
+            레이아웃 
+            모듈 
+            스테이트 
+            테마 
+        */
+
+        /* smacss 모듈 - subclass*/
+        .btn {
+            display: inline-block;
+            width: 300px;
+            padding: 20px 10px;
+            font-size: 18px;
+            text-decoration: none;
+            text-align: center;
+            color: #fff;
+            background-color: brown;
+        }
+        /* module */
+        .btn.btn-small {
+            width: 80px;
+            padding: 10px 0;
+            font-size: 14px;
+        }
+        /* sub-class */
+        .btn.btn-long {
+            width: 160px;
+        }
+
+        /* smacss 스테이트 */
+        .tabnav {
+            display: flex;
+        }
+
+        .tabnav li {
+            border-top: 1px solid;
+            border-right: 1px solid;
+            border-bottom: 1px solid;
+        }
+
+        .tabnav li:first-child {
+            border-left: 1px solid;
+        }
+
+        .tabnav li a {
+            display: block;
+            padding: 10px 30px;
+            text-decoration: none;
+        }
+        /* 자바스크립트에서 해당 클래스 컨트롤 */
+        .is-active {
+            background-color: blanchedalmond;
+        }
+
+        .is-active a {
+            /* 
+                클릭할 수 없다는 안내를 표시하는 것 
+                이미 활성화된 탭을 선택하지 않도록 유도
+            */
+            pointer-events: none;
+            color: red;
+        }
+
+
+        /* 모듈 */
+        .mod {
+            border: 1px solid;
+        }
+        /* 테마 */
+        .mod {
+            border-color: blue;
+        }
+
+
+        /* 3. BEM (Block, Element, Modifier) */
+
+
+    </style>
+</head>
+<body>
+    <!-- <button type="button" class="btn"></button>
+    <button type="button" class="btn btn-close"></button> -->
+    
+
+    <!-- <main id="main">
+        <button type="button" class="btn general">기본 버튼</button>
+        <button type="button" class="btn warning">취소 버튼</button>
+    </main> -->
+
+
+    <!-- <a href="" class="btn btn-small">아이디/비밀번호 찾기</a>
+    <a href="" class="btn btn-small btn-long">로그인</a> -->
+
+
+    <ul class="tabnav">
+        <li class="tabnav__item"><a href="tabnav__link">탭1</a></li>
+        <li><a href="">탭2</a></li>
+        <li><a href="">탭3</a></li>
+        <li><a href="">탭4</a></li>
+    </ul>
+
+    <section class="chapter-baseball">
+        <button type="button" class="chapter-baseball__btn chapter-baseball_active-false"></button>
+    </section>
+
+</body>
+</html>
