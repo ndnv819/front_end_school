@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>modal</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>    
+    <main id="app">
+        <h1 class="title">로그인 또는 회원가입</h1>
+        <img src="img/close.png" alt="닫기 버튼" class="close-btn">
+        <section class="login-input">
+            <h2 class="sr-only">로그인 정보를 입력하세요</h2>
+            <strong>위니브에서 여러분의 궁금증을 해결하세요! :)</strong>
+            <form action="#none">
+                <label for="login-id" class="sr-only">아이디를 입력하세요.</label>
+                <input type="text" placeholder="아이디" id="login-id" required>
+                <label for="login-pw" class="sr-only">비밀번호를 입력하세요.</label>
+                <input type="text" placeholder="비밀번호" id="login-pw" required>
+                <input type="checkbox" id="stay-logged-in">
+                <label for="stay-loggedin">로그인 상태 유지</label>
+                <button type="submit">로그인</button>
+            </form>
+        </section>
+        <section class="join-find">
+            <!-- <h2 class="sr-only">로그인 정보가 없을 경우</h2> -->
+            <a href="#none" class="join">회원가입</a><a href="#none" class="find">아이디/비밀번호 찾기</a>
+            <p>또는</p>
+        </section>
+        <section class="login-ways">
+            <h2 class="sr-only">다른 방법으로 로그인하기</h2>
+            <a href="#none" class="google-login">
+                <img src="img/Google__G__Logo 1.png" alt="">
+                구글 계정으로 로그인
+            </a>
+            <a href="#none" class="facebook-login">
+                <img src="img/facebook.png" alt="">
+                페이스북 계정으로 로그인
+            </a>
+            <a href="#none" class="naver-login">
+                <img src="img/naver-logo.png" alt="">
+                네이버 계정으로 로그인
+            </a>
+            <a href="#none" class="kakao-login">
+                <img src="img/message-circle.png" alt="">
+                카카오톡 계정으로 로그인
+            </a>
+        </section>
+    </main>
+</body>
+</html>
