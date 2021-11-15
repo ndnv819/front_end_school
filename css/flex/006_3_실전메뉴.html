@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex 실전 예제</title>
+    <link rel="stylesheet" href="../reset.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <style>
+        /* reset */
+        a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        /* style */
+        nav {
+            background-color: #222;
+            padding: 0 15px;
+        }
+
+        .logo {
+            font-size: 20px;
+            padding: 10px;
+        }
+
+        .item {
+            padding: 10px;
+        }
+
+        a:hover {
+            color: #ccc;
+        }
+
+        .menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .menu li a {
+            display: block;
+            padding: 10px;
+        }
+
+        .menu li.subitem a {
+            padding-left: 20px;
+        }
+
+        .subitem {
+            display: none;
+        }
+
+        .icon {
+            display: none;
+        }
+
+
+        /* 800아래로 줄어들면 */
+        @media screen and (max-width: 800px) {
+            .icon {
+                display: block;
+                /* 명시용, 이거 빼도 작동함 */
+                order: 1;
+                line-height: 35px;
+                font-size: 25px;
+            }
+
+            .item {
+                /* 마크업 순서와 상관없이 순서를 조정해버림, 스크린 리더기와는 상관없음 */
+                order: 2;
+                width: 100%;
+                text-align: center;
+            }
+
+            .subitem {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="menu">
+            <li class="logo">
+                <a href="#none">LOGO</a>
+            </li>
+            <li class="item">
+                <a href="#none">ABOUT ME</a>
+            </li>
+            <li class="item has-submenu">
+                <a href="#none">SKILL</a>
+            </li>
+            <li class="item">
+                <a href="#none">BLOG</a>
+                <ul class="submenu">
+                    <li class="subitem">
+                        <a href="#">HTML</a>
+                    </li>
+                    <li class="subitem">
+                        <a href="#">CSS</a>
+                    </li>
+                    <li class="subitem">
+                        <a href="#">JAVASCRIPT</a>
+                    </li>
+                    <li class="subitem">
+                        <a href="#">NODE</a>
+                    </li>
+                    <li class="subitem">
+                        <a href="#">REACT</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="item">
+                <a href="#none">CONTACT</a>
+            </li>
+            <li class="icon">
+                <a href="#none"><i class="far fa-bars"></i></a>
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>

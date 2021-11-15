@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>holy grail layout</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /* util */
+        .sr-only {
+            position: absolute;
+            left: -9999px;
+            top: auto;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+        }
+
+        body {
+            display: flex;
+            flex-wrap: wrap;
+            border: 1px solid;
+        }
+
+        .item {
+            border: 10px solid brown;
+        }
+
+        .item:nth-child(1) {
+            border: 10px solid green;
+            width: 100%;
+        }
+
+        .item:nth-child(2) {
+            border: 10px solid blue;
+            width: 70%;
+        }
+
+        .item:nth-child(3) {
+            border: 10px solid red;
+            width: 30%;
+        }
+
+        .item:nth-child(4) {
+            border: 10px solid yellow;
+            width: 100%;
+        }
+
+        @media screen and (max-width: 800px) {
+            .item:nth-child(2) {
+                width: 100%;
+            }
+
+            .item:nth-child(3) {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="item">
+        <h1 class="sr-only">제목1</h1>
+        <nav>
+            <ul>
+                <li>menu1</li>
+                <li>menu2</li>
+                <li>menu3</li>
+            </ul>
+        </nav>
+    </header>
+    <section class="item">
+        <h2>제목2</h2>
+        <article>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto, ex praesentium facilis eum incidunt maiores consequatur sed soluta molestiae, ipsa possimus dolorum et quibusdam esse in rem officia dolor iure.
+        Ea iusto nihil dolor quod iure quia asperiores, fugit quidem in quae architecto quasi totam quis culpa commodi, nobis distinctio natus accusamus voluptatum possimus minima dolorem. Beatae perferendis aut impedit.</article>
+    </section>
+    <aside class="item">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis nobis voluptatibus consequatur earum hic ad, ex pariatur modi harum nisi, ratione deleniti animi libero dolorem cumque cum magni ut tempora.</aside>
+    <footer class="item">footer</footer>
+</body>
+</html>

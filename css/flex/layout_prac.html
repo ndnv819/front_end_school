@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex layout</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        img {
+            width: 100%;
+        }
+        #wrap {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        header {
+            width: 100%;
+            display: flex;  
+            justify-content: space-between;
+            padding: 50px 50px;
+            background-color: rgb(60, 74, 105);
+            color: white;
+        }
+
+        nav ul {
+            display: flex;
+        }
+
+        nav ul li a {
+            color: white;
+        }
+
+        nav ul li:not(:last-child) {
+            margin-right: 30px;
+        }
+
+        main {
+            display: flex;
+        }
+
+        section {
+            width: 70%;
+            border: 3px solid rgb(60, 74, 105);
+        }
+
+        article {
+            padding: 50px;
+        }
+
+        .tit {
+            font-size: 25px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .cont-txt {
+            line-height: 30px;
+            margin-bottom: 20px;
+        }
+
+        aside {
+            width: 30%;
+            border: 3px solid rgb(60, 74, 105);
+            padding: 30px;
+        }
+
+        aside a[class^="btn"] {
+            display: block;
+            width: 100%;
+            padding: 20px;
+            background-color: gray;
+            color: white;
+            text-align: center;
+            border-radius: 30px;
+        }
+
+        aside .btn-more {
+            margin-bottom: 20px;
+        }
+
+        footer {
+            width: 100%;
+            text-align: center;
+            border: 3px solid rgb(60, 74, 105);
+            padding: 30px;
+            line-height: 30px;
+        }
+
+        @media screen and (max-width: 960px) {
+            main {
+                display: block;
+            }
+
+            section {
+                width: 100%;
+            }
+
+            aside {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <h1>LOGO</h1>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#none">HOME</a>
+                    </li>
+                    <li>
+                        <a href="#none">ABOUT</a>
+                    </li>
+                    <li>
+                        <a href="#none">WORKS</a>
+                    </li>
+                    <li>
+                        <a href="#none">CONTACT</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section>
+                <article>
+                    <h2 class="tit">Lorem ipsum</h2>
+                    <p class="cont-txt">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse molestiae quis perspiciatis perferendis numquam voluptate doloribus laborum error illum veritatis dolores, amet itaque natus, blanditiis nihil possimus repellat facilis omnis?</p>
+                    <img src="../img/a.jpg" alt="제주 섭지코지 사진입니다." class="cont-img">
+                </article>
+                <article>
+                    <h2 class="tit">Lorem ipsum</h2>
+                    <p class="cont-txt">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse molestiae quis perspiciatis perferendis numquam voluptate doloribus laborum error illum veritatis dolores, amet itaque natus, blanditiis nihil possimus repellat facilis omnis?</p>
+                    <img src="../img/a.jpg" alt="제주 섭지코지 사진입니다.">
+                </article>
+            </section>
+            <aside>
+                <h2 class="tit">Lorem ipsum</h2>
+                <p class="cont-txt">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse molestiae quis perspiciatis perferendis numquam voluptate doloribus laborum error illum veritatis dolores, amet itaque natus, blanditiis nihil possimus repellat facilis omnis? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto, dolorem sapiente ipsa reiciendis quos nihil minima autem facilis a ex quidem officia numquam laboriosam, aliquam sed et. Alias, ut maxime. Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium eaque mollitia exercitationem officia autem voluptatum vitae, consectetur repudiandae asperiores ab maiores vel sit, quaerat tenetur hic doloremque magni veritatis accusamus!</p>
+                <h2 class="tit">Lorem ipsum</h2>
+                <p class="cont-txt">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse molestiae quis perspiciatis perferendis numquam voluptate doloribus laborum error illum veritatis dolores, amet itaque natus, blanditiis nihil possimus repellat facilis omnis? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto, dolorem sapiente ipsa reiciendis quos nihil minima autem facilis a ex quidem officia numquam laboriosam, aliquam sed et. Alias, ut maxime. Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium eaque mollitia exercitationem officia autem voluptatum vitae, consectetur repudiandae asperiores ab maiores vel sit, quaerat tenetur hic doloremque magni veritatis accusamus!</p>
+                <a href="#none" class="btn-more">MORE</a>
+                <a href="#none" class="btn-sign">SIGN IN</a>
+            </aside>
+        </main>
+        <footer>        
+            <ul>
+                <li>주식회사 oqo</li>
+                <li>서울시 서울구 서울동</li>
+                <a href="#none">고객센터 바로가기</a>
+            </ul>
+            <small>@copyright oqoqoqoqododo</small>    
+        </footer>
+    </div>
+</body>
+</html>
