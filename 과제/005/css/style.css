@@ -1,10 +1,43 @@
 /* 주석 깨짐 방지 */
 @charset "utf-8";
 
+/* font */
+@font-face {
+    font-family: 'SpoqaHanSansNeo-Bold';
+    src: url(../css/SpoqaHanSansNeo-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'SpoqaHanSansNeo-Light';
+    src: url(../css/SpoqaHanSansNeo-Light.ttf);
+}
+
+@font-face {
+    font-family: 'SpoqaHanSansNeo-Medium';
+    src: url(../css/SpoqaHanSansNeo-Medium.ttf);
+}
+
+@font-face {
+    font-family: 'SpoqaHanSansNeo-Regular';
+    src: url(../css/SpoqaHanSansNeo-Regular.ttf);
+}
+
+/* reset css */
+body {
+    font-family: 'SpoqaHanSansNeo-Regular';
+}
+
+/* utility */
 .sr-only {
     position: absolute;
-    left: -9999px;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
 }
+
+/******** index.html ********/
 #login-page {
     width: 500px;
     height: 240px;
@@ -37,12 +70,9 @@
     font-weight: bold;
 }
 
-/* login-form */
-
-#login-form {
-    width: 520px;
-    height: 712px;
-    padding: 20px 24px 25px 24px;
+/******** login-form.html ********/
+#app {
+    width: 520px;  
     background: white;
     border: 1px solid #C4C4C4;
     box-sizing: border-box;
@@ -51,4 +81,174 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.title {
+    text-align: center;
+    height: 58px;
+    line-height: 58px;
+    border-bottom: 1px solid #C4C4C4;
+    font-weight: bold;
+}
+
+.close-btn {
+    position: absolute;
+    top: 18.5px;
+    right: 24px;
+    cursor: pointer;
+}
+
+section {
+    padding: 0 24px 0 24px;
+}
+
+.login-form {
+    padding-top: 26px;
+}
+
+.login-form strong {
+    font-size: 20px;
+}
+
+.login-form .login-input {
+    margin-top: 24px;
+}
+
+/* 속성선택자 연습 */
+.login-input input[type^="text"] {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 10px;
+    border: 1px solid #C4C4C4;
+    border-radius: 5px;
+    padding-left: 16px;
+}
+
+.login-input input[id^="login-pw"] {
+    margin-bottom: 17px;
+}
+
+.login-input input[type="checkbox"] {
+    display: none;
+}
+
+.login-input label[for^="stay"] {
+    color: #767676;
+    position: relative;
+    margin-left: 32px;
+}
+
+.login-input label[for^="stay"]::before {
+    content: '';
+    position: absolute;
+    background-image: url(../img/check-box.png);
+    width: 22px;
+    height: 22px;
+    top: -2px;
+    left: -32px;
+}
+
+.login-input input[type="checkbox"]:checked + label[for^="stay"]::before{
+    background-image: url(../img/checked-box.png);
+}
+
+.login-input button {
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    background-color: #2F80ED;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 21px 0 20px 0;
+    border: none;
+    cursor: pointer;
+}
+
+.join-find {
+    text-align: center;
+    font-size: 14px;
+    color: #767676;
+}
+
+.join-find a {
+    color: #767676;
+}
+
+.join-find .join {
+    position: relative;
+    margin-right: 28px;
+}
+
+.join-find .join::after {
+    content: '';
+    width: 4px;
+    height: 18px;
+    color: #767676;
+    position: absolute;
+}
+
+.join-find p {
+    position: relative;
+}
+
+.join-find p::before {
+    content: '';
+    position: absolute;
+    background-image: url(../img/line.png);
+    width: 210px;
+    height: 1px;
+    left: 0;
+    top: 5px;
+}
+
+.join-find p::after {
+    content: '';
+    position: absolute;
+    background-image: url(../img/line.png);
+    width: 210px;
+    height: 1px;
+    right: 0;
+    top: 5px;
+}
+
+.join-find p {
+    margin: 30px 0 20px 0;
+}
+
+.login-ways a {
+    width: 100%;
+    height: 50px;
+    display: inline-block;
+    border-radius: 5px;
+    text-align: center;
+    color: #767676;
+    position: relative;
+    line-height: 50px;
+    font-weight: bold;
+    border: 1px solid;
+    margin-bottom: 10px;
+}
+
+.login-ways .google-login {
+    border-color: #767676;
+}
+
+.login-ways .facebook-login {
+    border-color: #2D9CDB;
+}
+
+.login-ways .naver-login {
+    border-color: #00BF18;
+}
+
+.login-ways .kakao-login {
+    border-color: #F2C94C;
+    margin-bottom: 30px;
+}
+
+.login-ways a img {
+    position: absolute;
+    left: 13px;
+    top: 10px;
 }
