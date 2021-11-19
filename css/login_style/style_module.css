@@ -8,7 +8,7 @@
 }
 
 /* 버튼 모듈 */
-.btn-login{
+.btn-login {
     width:100%;
     padding:17px 0 15px;
     font-weight: bold;
@@ -21,16 +21,17 @@
     cursor: pointer;
 }
 
-.btn-close{
+.btn-close {
     width:16px;
     height:16px;
+    padding: 0;
     background-color: #fff;
     border:none;
     cursor: pointer;
 }
 
 /* 인풋 모듈 */
-.module-inp .inp-login{
+.module-inp .inp-login {
     display: block;
     width:100%;
     padding:15px 0 15px 16px;
@@ -41,11 +42,11 @@
     font-size: 16px;
     line-height: 20px;
 }
-.module-inp.module-inp-id.error .inp-login{
+.module-inp.module-inp-id.error .inp-login {
     border:2px solid #F4492E;
 }
 
-.module-inp .inp-error{
+.module-inp .inp-error {
     display: none;
     margin:6px 0 0 4px;
     font-size: 14px;
@@ -53,7 +54,7 @@
     color: #F4492E;
 }
 
-.module-inp.error .inp-error{
+.module-inp.error .inp-error {
     display: block;
 }
 
