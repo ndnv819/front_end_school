@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clip</title>
+    <style>
+        div {
+            position: relative;
+            width: 500px;
+        }
+
+        img {
+            position: absolute;
+            clip: rect(100px 300px 206px 10px);
+        }
+
+        /* img {
+            position: absolute;
+            clip: rect(100px 300px 30px 10px);
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+        } */
+
+        .clip {
+            position: absolute;
+            clip: rect(0 0 0 0);
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+        }
+
+        p {
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="https://img.marieclairekorea.com/2021/03/mck_6051a0540b2dc.jpg" alt="">
+    </div>
+    <!-- margin: -1px;를 주는 이유에 대하여 -->
+    <p class="clip">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis nihil doloribus ut nesciunt nam, minus excepturi rem, delectus deleniti iste quia sequi ducimus sunt? Ea quasi consequatur ducimus reprehenderit culpa?
+    </p>
+</body>
+</html>
