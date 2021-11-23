@@ -82,10 +82,13 @@
     display: block;
     content: '';
     float: left;
-    width: 22px;
-    height: 22px;
-    background-image: url("../images-login/Google__G__Logo\ 1.png");
-    background-position: center;
+    width: 28px;
+    height: 28px;
+    background-image: url("../images-login/sprites_retina.png");
+    /* 이미지 크기를 2로 나눠서 절반으로 줄임 */
+    background-size: 192px 48px;
+    /* 사이즈를 절반으로 줄였으니까 위치 역시 절반으로 줄여서 적용 */
+    background-position: -106px -10px;
 }
 
 .link-sns-login.icon-facebook {
@@ -93,7 +96,7 @@
 }
 
 .link-sns-login.icon-facebook::before {
-    background-image: url("../images-login/facebook.png");
+    background-position: -10px -10px;
 }
 
 .link-sns-login.icon-naver {
@@ -101,7 +104,7 @@
 }
 
 .link-sns-login.icon-naver::before {
-    background-image: url("../images-login/naver-logo.png");
+    background-position: -58px -10px;
 }
 
 .link-sns-login.icon-kakao {
@@ -109,5 +112,32 @@
 }
 
 .link-sns-login.icon-kakao::before {
-    background-image: url("../images-login/message-circle.png");
+    background-position: -154px -10px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio :2) {
+    .link-sns-login::before {
+        display: block;
+        content: '';
+        float: left;
+        width: 28px;
+        height: 28px;
+        background-image: url("../images-login/sprites_retina.png");
+        /* 이미지 크기를 2로 나눠서 절반으로 줄임 */
+        background-size: 192px 48px;
+        /* 사이즈를 절반으로 줄였으니까 위치 역시 절반으로 줄여서 적용 */
+        background-position: -106px -10px;
+    }
+
+    .link-sns-login.icon-facebook::before {
+        background-position: -10px -10px;
+    }
+
+    .link-sns-login.icon-naver::before {
+        background-position: -58px -10px;
+    }
+
+    .link-sns-login.icon-kakao::before {
+        background-position: -154px -10px;
+    }
 }
