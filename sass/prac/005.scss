@@ -1,0 +1,13 @@
+.article {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    .article-content {
+      font-size: 14px;
+      opacity: 0.7;
+      @at-root i { // 중첩에서 벗어나고 싶은 선택자 앞에 @at-root 를 작성
+        opacity: 0.5;
+      }
+    }
+  }

@@ -1,0 +1,16 @@
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.card {
+    background: gray;
+    @include flex-center;
+}
+
+.aside {
+    background: white;
+    @include flex-center;
+}
+/*.card와 .aside 클래스 선택자의 적용한 스타일이 겹침*/

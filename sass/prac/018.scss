@@ -1,0 +1,20 @@
+// mixin의 인수에서 기본값을 설정할 수 있다. 
+@mixin image-style($ul, $size, $repeat, $positionX: 50%, $positionY: 50%) {
+    background-image: url($ul);
+    background-size: $size;
+    background-repeat: $repeat;
+    background-position: $positionX $positionY;
+} 
+  
+// $postionX, $positionY의 값을 적어주지 않아도 기본값이 있어서 괜찮다.  
+.profile {
+    @include image-style("./assets/user.jpg", cover, no-repeat);
+}
+
+// 결과물
+// .profile {
+//     background-image: url("./assets/user.jpg");
+//     background-size: cover;
+//     background-repeat: no-repeat;
+//     background-position: 50% 50%;
+// }

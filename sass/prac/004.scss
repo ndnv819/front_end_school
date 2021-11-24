@@ -1,0 +1,11 @@
+ul {
+    li {
+        &:hover {// 가상요소
+            background: green;
+            cursor: pointer;                
+        }
+        &:last-child {// 가상클래스
+            border-bottom: 2px solid black;               
+        }
+    }
+}

@@ -1,0 +1,10 @@
+@mixin image-style($x, $y) {
+    font-size: $x * $y + px;
+    @content
+} 
+
+div {
+    @include image-style(10, 10) {
+        color: red;
+    }
+}

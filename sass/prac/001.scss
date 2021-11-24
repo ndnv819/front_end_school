@@ -1,0 +1,23 @@
+/* 여러줄 주석은 볼 수 있다 */
+// 한줄 주석은 볼 수 없다
+
+ul {
+    list-style: none;
+    li {
+        color: red;
+        font-size: 20px;
+    }
+}
+
+.one {
+    color: red;
+    .two {
+        color: green;
+        .three {
+            font-size: 20px;
+        }
+        .four {
+            font-size: 30px;
+        }
+    }
+}
