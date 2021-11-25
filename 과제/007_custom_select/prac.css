@@ -1,0 +1,99 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.btn-select {
+    width: 200px;
+    border: 1px solid #C4C4C4;
+    background-color: #fff;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 13px 0 13px 14px;
+    font-size: 12px;
+    text-align: left;
+    position: relative;
+    cursor: pointer;
+}
+
+.btn-select:hover {
+    border: 1px solid #F8E4FF;
+}
+
+.btn-select:hover::after {
+    transform: rotate(180deg);
+}
+
+.btn-select.on .btn-select::after {
+    transform: rotate(180deg);
+}
+
+.btn-select:focus {
+    outline: 1px solid #F8E4FF;
+    border: none;
+}
+
+.btn-select:focus::after {
+    transform: rotate(180deg);
+}
+
+.btn-select.on+.list-lang {
+    display: block;
+}
+
+.btn-select::after {
+    content: '';
+    position: absolute;
+    background-image: url(img/Polygon.png);
+    width: 10px;
+    height: 6px;
+    background-size: cover;
+    right: 16px;
+    top: 16px;
+}
+
+.list-lang {
+    display: none;
+    width: 200px;
+    border: 1px solid #C4C4C4;
+    background-color: #fff;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 0 8px;
+}
+
+.list-lang .item-lang {
+    height: 40px;
+    line-height: 40px;
+}
+
+.item-lang button {
+    font-size: 14px;
+    border: none;
+    background: none;
+    padding: 5px 8px;
+    width: 100%;
+    text-align: left;
+}
+
+.item-lang button:hover,
+.item-lang button:focus {
+    background-color: #F8E4FF;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.item-lang button:focus {
+    outline: none;
+}

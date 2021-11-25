@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>select custom</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="prac.css">
+</head>
+<body>
+    <div>
+        <button class="btn-select">최애 프로그래밍 언어</button>
+        <ul class="list-lang">
+            <li class="item-lang">
+                <button type="button">Python</button>
+            </li>
+            <li class="item-lang">
+                <button type="button">Java</button>
+            </li>
+            <li class="item-lang">
+                <button type="button">JavaScript</button>
+            </li>
+            <li class="item-lang">
+                <button type="button">C#</button>
+            </li>
+            <li class="item-lang">
+                <button type="button">C/C++</button>
+            </li>
+        </ul>
+    </div>
+    <script>
+        const btn = document.querySelector('.btn-select');
+        const list = document.querySelector('.list-lang');
+        btn.addEventListener('click', () => {
+            btn.classList.toggle('on');
+        });
+        list.addEventListener('click', (event) => {
+            if (event.target.nodeName === "BUTTON") {
+                btn.innerText = event.target.innerText;
+                btn.classList.remove('on');
+            }
+        });
+    </script>
+</body>
+</html>
