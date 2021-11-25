@@ -1,0 +1,90 @@
+.photo-box:nth-child(1) {
+  background-image: url("../assets/phoster1.png");
+}
+
+.photo-box:nth-child(2) {
+  background-image: url("../assets/phoster2.png");
+}
+
+.photo-box:nth-child(3) {
+  background-image: url("../assets/phoster3.png");
+}
+
+.photo-box:nth-child(4) {
+  background-image: url("../assets/phoster4.png");
+}
+
+.photo-box:nth-child(5) {
+  background-image: url("../assets/phoster5.png");
+}
+
+.content-1 {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  font-size: 10px;
+}
+
+.content-2 {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  font-size: 20px;
+}
+
+.content-3 {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  font-size: 30px;
+}
+
+.content-4 {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  font-size: 40px;
+}
+
+.content-5 {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  font-size: 50px;
+}
+
+.content-6 {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  font-size: 60px;
+}
+
+.content-7 {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  font-size: 70px;
+}
+
+.content-8 {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  font-size: 80px;
+}
+
+.content-9 {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  font-size: 90px;
+}
+
+.content-10 {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  font-size: 100px;
+}
+/*# sourceMappingURL=024.css.map */
