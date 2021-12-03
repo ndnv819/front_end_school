@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트</title>
+    <style>
+        .orange {
+            background-color: orange;
+        }
+        .lavender {
+            background-color: lavender;
+        }
+        .black {
+            background-color: black;
+        }
+        div {
+            background-color: lightgray;
+            width: 500px;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <button class="btn1">orange</button>
+    <button class="btn2">lavender</button>
+    <button class="btn3">black</button>
+    <script>
+        const btn1 = document.querySelector('.btn1');
+        const btn2 = document.querySelector('.btn2');
+        const btn3 = document.querySelector('.btn3');
+        const div = document.querySelector('div');
+
+        btn1.addEventListener('click', function() {
+            div.classList.add('orange');
+            div.classList.remove('lavender', 'black');
+        })
+
+        btn2.addEventListener('click', function() {
+            div.classList.add('lavender');
+            div.classList.remove('orange', 'black');
+        })
+
+        btn3.addEventListener('click', function() {
+            div.classList.add('black');
+            div.classList.remove('orange', 'lavender');
+        })
+    </script>
+</body>
+</html>

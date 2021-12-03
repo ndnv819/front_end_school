@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 제어2</title>
+    <style>
+        .canvas {
+            width: 500px;
+            height: 500px;
+            margin: 0 auto;
+            background-color: black;
+        }
+
+        .canvas.red {
+            background-color: red;
+        }
+        .canvas.yellow {
+            background-color: yellow;
+        }
+        .canvas.green {
+            background-color: green;
+        }
+
+        ul {
+            display: flex;
+            width: 500px;
+            list-style: none;
+            justify-content: space-around;
+            margin: 50px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="canvas"></div>
+    <ul>
+        <li>
+            <button type="button" class="btn-red">red</button>
+        </li>
+        <li>
+            <button type="button" class="btn-yellow">yellow</button>
+        </li>
+        <li>
+            <button type="button" class="btn-green">green</button>
+        </li>
+    </ul>    
+    <script>
+        const canvas = document.querySelector('.canvas');
+        const btnRed = document.querySelector('.btn-red');
+        const btnYellow = document.querySelector('.btn-yellow');
+        const btnGreen = document.querySelector('.btn-green');
+
+        // 2번째 방법. 중복 코드 줄이기 -> 리팩토링
+        let btnArr = [btnRed, btnYellow, btnGreen];
+        btnArr.forEach((item) => {
+            item.addEventListener('click', () => {
+                // 버튼을 클릭하면 일단 다 초기화시킴
+                canvas.classList.remove('red', 'yellow', 'green')
+                // 각 버튼을 클래스이름으로 구별짓기 
+                if(item.className === 'btn-red') {
+                    canvas.classList.add('red');
+                } else if(item.className === 'btn-yellow') {
+                    canvas.classList.add('yellow');
+                } else {    
+                    canvas.classList.add('green');
+                }
+            })
+        })
+
+        // 1번째 방법. 기본 방식 
+        // btnRed.addEventListener('click', () => {
+        //     // 버튼을 클릭하면 일단 다 초기화시킴
+        //     canvas.classList.remove('red', 'yellow', 'green')
+        //     canvas.classList.add('red');
+        // })
+        // btnYellow.addEventListener('click', () => {
+        //     canvas.classList.remove('red', 'yellow', 'green')
+        //     canvas.classList.add('yellow');
+        // })
+        // btnGreen.addEventListener('click', () => {
+        //     canvas.classList.remove('red', 'yellow', 'green')
+        //     canvas.classList.add('green');
+        // })
+
+    </script>
+</body>
+</html>

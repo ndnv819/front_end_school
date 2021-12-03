@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로또</title>
+</head>
+
+<body>
+    <script>
+        // 랜덤 숫자 뽑기 
+        function randomFunc(min, max) {
+            let result = Math.floor(Math.random()*(max-min)+min);
+            return result;
+        }
+
+        // 1번째 방법
+        let lottoArr = [];
+        function lottoGenerator() {
+            while(lottoArr.length < 6) {
+                // 1 ~ 45 사이의 숫자가 result에 들어감. 
+                let result = randomFunc(1, 46);
+
+                // 판별 변수 
+                let isGot = false;
+                // 중복 판별
+                lottoArr.forEach(element => {
+                    if(element === result) {
+                        // 중복됐다고 표시!
+                        isGot = true;
+                    }
+                });
+                // 중복이 없다면 배열에 추가 
+                if(!isGot) {
+                    lottoArr.push(result);
+                }
+            }
+            return lottoArr;
+        }
+
+        // 2번째 방법 
+        // function lottoGenerator() {
+        //     let lottoArr = [];
+        //     while (lottoArr.length < 6) {
+        //         let result = randomFunc(1, 46);
+        //         // 중복 판단, 다만 include는 IE지원안됨
+        //         // 중복되는 숫자가 없다면
+        //         if(!lottoArr.includes(result)) {
+        //             lottoArr.push(result);
+        //         }
+        //     }
+        //     return lottoArr;
+        // }
+
+        // 3번째 방법
+        // let lottoSet = new Set();
+        // function lottoGenerator() {
+
+        //     while (lottoSet.size < 6) {
+        //         let result = randomFunc(1, 46);
+        //         lottoSet.add(result);
+        //     }
+        //     return lottoSet;
+        // }
+
+        // 결과값 출력 
+        console.log(lottoGenerator());
+    </script>
+    <!-- 
+        isGot이 true 라면 if(true) 가 되어 {}에 들어갑니다.
+        isGot이 false 라면 if(true) 가 되어 {}에 못들어갑니다.
+        결과적으로 if(isGot) 의 뜻은 if(isGot === true) 과 동일해요
+    -->
+</body>
+
+</html>
