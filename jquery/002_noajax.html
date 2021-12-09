@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ajax 통신 연습</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <input type="text" class="id"><br>
+    <input type="password" class="pw"><br>
+    <button type="button" class="dataLoadButton">로그인!!</button>
+    <div class="dataField">data</div>
+    <script>
+    let userData = [
+    {
+        "_id": "61b05e53210fb3490155afb2",
+        "id": "Lisa",
+        "pw": "b4cfaa5b-4040-4d57-adda-75a2cdb6e7f6",
+        "index": 0,
+        "picture": "http://placehold.it/32x32",
+        "age": 28,
+        "eyeColor": "brown",
+        "name": "Salazar Shaw",
+        "gender": "male",
+        "company": "ISOLOGICA",
+        "email": "salazarshaw@isologica.com",
+        "phone": "+1 (837) 518-3132",
+        "address": "983 Campus Place, Soudan, Idaho, 5633",
+        "grade": "관리자"
+    },
+    {
+        "_id": "61b05e5325386480dc41a388",
+        "id": "Mabel",
+        "pw": "46e6b380-367b-4780-b102-902030d2357b",
+        "index": 1,
+        "picture": "http://placehold.it/32x32",
+        "age": 26,
+        "eyeColor": "brown",
+        "name": "Hoover Tyler",
+        "gender": "male",
+        "company": "DOGNOSIS",
+        "email": "hoovertyler@dognosis.com",
+        "phone": "+1 (988) 586-2470",
+        "address": "305 Imlay Street, Ypsilanti, Connecticut, 125",
+        "grade": "실버"
+    },
+    {
+        "_id": "61b05e534a1657233781138a",
+        "id": "Bauer",
+        "pw": "6372e899-2d2c-4cd4-a9ca-a1d056894b21",
+        "index": 2,
+        "picture": "http://placehold.it/32x32",
+        "age": 21,
+        "eyeColor": "blue",
+        "name": "Maritza Hanson",
+        "gender": "female",
+        "company": "ISOPOP",
+        "email": "maritzahanson@isopop.com",
+        "phone": "+1 (875) 573-2894",
+        "address": "425 Dare Court, Advance, Missouri, 1322",
+        "grade": "골드"
+    }
+];
+
+        function success(loginUserDataParams) {
+            document.write(`
+                ${loginUserDataParams.name}님 환영합니다!
+                등급 : ${loginUserDataParams.grade}, 
+                멋사코인 : ${loginUserDataParams.phone.slice(-4)}
+                `);
+        }
+
+        function fail() {
+            document.write('fail');
+        }
+
+        $('.dataLoadButton').click(function() {
+            let id = $('.id').val()
+            let pw = $('.pw').val()
+
+            loginUserData = userData.find(user => user.id === id && user.pw === pw);
+
+            // 로그인 성공시
+            if (loginUserData) {
+                success(loginUserData);
+            }
+            // 로그인 실패시
+            else {
+                fail();
+            }
+                
+        });
+    </script>
+</body>
+</html>
