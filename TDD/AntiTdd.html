@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        article {
+            display: inline-block;
+            border: 3px solid;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        .viewer {
+            display: block;
+            font-size: 24px;
+            color: green;
+            margin: 50px 0 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <article>
+        <strong class="viewer"></strong>
+        <input type="text" class="inp-txt">
+        <!-- 서로 다른 언어가 섞여있다.(html, javascript) -->
+        <button class="btn-push" onclick="push()">적용</button>
+    </article>
+
+    <script>
+        // 전역 변수가 사용되고 있다.
+        let txt = "hello";
+
+
+        // 함수가 아니기 때문에 테스트가 불가능하다.
+        const viewer = document.querySelector(".viewer");
+        viewer.textContent = txt;
+
+        // 재사용성이 떨어진다. -> 대상이 하드코딩되어있다.(.inp-txt에만 적용)
+        function push() {
+            const inpTxt = document.querySelector('.inp-txt');
+            viewer.textContent = inpTxt.value;
+        }    
+
+        // 위와 같은 방법으로 코드를 작성하면 TDD 테스트가 안된다 
+        // 그럼 테스트가 가능하려면 어떤 조건을 지켜야 할까
+        // 1. 코드를 UI에서 완전히 분리한다.
+        // 2. 자바스크립트를 JS 파일에서 분리한다.
+        // 3. 모든 기능은 함수로 구현한다. 
+    </script>
+</body>
+</html>
