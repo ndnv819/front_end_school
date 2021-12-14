@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        p {
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 예시3~ -->
+    <p></p>
+    <input type="text">
+    <button>Write Something!</button>
+
+    <script>
+        // 예시3
+        const myBtn = document.querySelector("button");
+        const myP = document.querySelector("p");
+        const myInput = document.querySelector("input");
+
+        // myBtn.addEventListener('click', function() {
+        //     myP.textContent = myInput.value;
+        //     console.log(myP.textContent);
+        // });
+
+
+        // 예시4
+        // input 요소에 'input' 이벤트를 연결하면 실시간으로 값이 반영되게 만들 수도 있습니다.
+        // myInput.addEventListener('input', () => {
+        //     myP.textContent = myInput.value;
+        // });
+
+
+        // 예시5
+        // myP.innerHTML = "<strong>I'm Strong!!</strong>";
+        // myP.innerHTML = "I'm Strong!!";
+        // myP.textContent = "I'm Strong!!";
+        // myP.innerText = "<strong>I'm Strong!!</strong>";
+        // console.log(myP.innerText);
+        myP.innerHTML = "<strong class='txt-strong'>I'm Strong!!</strong>";
+        // myP.outerHTML = "<div></div>";
+
+        // innerHTML 은 요소(element) 내에 포함 된 HTML 마크업을 가져오거나 설정합니다. 
+        // 단순히 텍스트만 넣을 때는 innerHTML 쓰면 비효율. 웹 렌더링이 느려진다. textContent 쓰기.
+        // innerText 속성은 요소와 그 자손의 렌더링 된 텍스트 콘텐츠를 나타냅니다. (innerText는 "사람이 읽을 수 있는" 요소만 처리합니다.)
+        // textContent 속성은 노드의 텍스트 콘텐츠를 표현합니다.
+
+        // textContent는 style, script 못 읽음 
+        // innerText는 읽어서 처리함
+    </script>
+</body>
+</html>
