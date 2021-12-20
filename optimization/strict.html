@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <script>
+        'use strict'; 
+
+        str = "hello strict"; // str is not defined
+
+        var undefined = "undefined"; // 
+        console.log(undefined) //  Cannot assign to read only property 'undefined' of object '#<Window>'
+
+        var Infinity = 100; 
+        console.log(Infinity) // Cannot assign to read only property 'Infinity' of object '#<Window>'
+
+        Math.PI = 0; // Cannot assign to read only property 'PI' of object '#<Object>'
+
+        const Employee = {
+            firstname: "jaehyun",
+            lastname: 'han'
+        }
+
+        console.log(Employee.firstname);
+        delete Employee.firstname;
+        console.log(Employee.firstname);
+
+        delete Object.prototype; // Cannot delete property 'prototype' of function Object()
+
+        function myFunc(a, a, b) { // 매개변수 중복
+            console.log(a + a + b);
+        }
+
+        myFunc(1, 2, 3);  // Duplicate parameter name not allowed in this context
+
+
+        // use strict 안하면 
+        // str = "hello strict"; // 자동으로 var가 된다 
+        // var undefined = "undefined"; // 예약어를 사용했음
+        // console.log(undefined) // 무시하고 그냥 undefined라는 문자가 뜬다 // 조용한 에러 처리 
+        // var Infinity = 100; // Infinity 예약어
+        // console.log(Infinity)
+        // Math.PI = 0;
+
+        // const Employee = {
+        //     firstname: "jaehyun",
+        //     lastname: 'han'
+        // }
+
+        // console.log(Employee.firstname);
+        // delete Employee.firstname;
+        // console.log(Employee.firstname);
+
+        // delete Object.prototype;
+
+        // function myFunc(a, a, b) { // 매개변수 중복 
+        //     console.log(a + a + b);
+        // }
+
+        // myFunc(1, 2, 3); //  7
+    </script>
+</body>
+
+</html>
