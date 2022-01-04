@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>넌적스 테스트1</title>
+</head>
+<body>
+    <h1>hello world</h1>
+    <p>안녕 난 {{name}}이야!</p>
+    <p>{{age}}</p>
+    <p id="one">test</p>
+    <p id="two">test</p>
+
+    <script>
+      document.querySelector('#one').innerHTML = `안녕 난 {{name}}ㅇ이야`;
+      document.querySelector('#two').innerHTML = `내 나이는 {{age}}ㅇ이야`;
+    </script>
+</body>
+</html>
