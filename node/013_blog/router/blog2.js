@@ -3,6 +3,10 @@ let blogs = require('../database/dataBlog');
 
 const router = express.Router();
 
+// 부트스트랩 안먹히는 거 해결법 2 시작
+// router.use(express.static('resource/static'));
+// 부트스트랩 안먹히는 거 해결법 2 끝
+
 // * / url에 최신 게시물 3개 응답
 // * /blog - 블로그 글 모두 응답
 // * /blog?section=it - it관련된 글 모두 응답

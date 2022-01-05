@@ -8,10 +8,20 @@ const helmet = require('helmet'); // 보안
 const blogRouter = require('./router/blog2.js'); // 수정 2
 const dateFilter = require('nunjucks-date-filter'); // 수정2
 
+// 부트스트랩 안먹히는 거 해결법 1 시작 
+const path = require('path');
+
 const app = express();
 app.set('view engine', 'html');
 
-app.use(express.static('resource/static'));
+경로 = path.join(path.join(__dirname + '/resource'), '/static');
+console.log(경로);
+
+app.use('/', express.static(경로));
+app.use('/blog', express.static(경로));
+// 부트스트랩 안먹히는 거 해결법 1 끝
+
+// app.use(express.static('resource/static'));
 let env = nunjucks.configure('resource/template', {
     autoescape: true,
     express: app,
